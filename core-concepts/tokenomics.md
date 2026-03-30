@@ -50,7 +50,3 @@ SBTs are ERC-721 tokens that are non-transferable and serve as identity and acce
 - Required to place orders on the project's Private Order Book
 - Minted when a freelancer or investor is onboarded through governance
 - Used by Lit Protocol for encryption access control (only SBT holders can decrypt private proposal data)
-
-### Sybil Resistance
-
-SBTs provide built-in Sybil resistance — since they are non-transferable and bound to a wallet, one person cannot accumulate multiple memberships to game the system.
