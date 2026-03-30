@@ -16,27 +16,14 @@ Community-driven, holacratic development without upfront funding. Remuneration i
 
 When a project is created, the `ProjectFactory` deploys a complete DAO infrastructure:
 
-| Contract | Purpose |
-|----------|---------|
-| 7 Governors | Democratic governance for different domains |
-| NTToken (NTT) | Non-transferable contribution token |
-| ProjectMembershipSBT | Soul-bound membership token |
-| PrivateOrderBook | Internal NTT market |
-| ProjectTreasury | Fund custody and management |
-| AccessManager | Role-based permission control |
-
-## Project Metadata
-
-Each project stores structured metadata in PocketBase:
-
-- **Title** and **Tagline**
-- **Description / Mission**
-- **Problem Solved**
-- **Tokenomics** plan
-- **Tech Stack**
-- **Roadmap**
-- **Website** and **Social Links**
-- **Contact Email** (private, admin-only)
+| Contract             | Purpose                                     |
+| -------------------- | ------------------------------------------- |
+| 7 Governors          | Democratic governance for different domains |
+| NTToken (NTT)        | Non-transferable contribution token         |
+| ProjectMembershipSBT | Soul-bound membership token                 |
+| PrivateOrderBook     | Internal NTT market                         |
+| ProjectTreasury      | Fund custody and management                 |
+| AccessManager        | Role-based permission control               |
 
 ## The Factory Model
 
