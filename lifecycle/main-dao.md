@@ -6,12 +6,6 @@ The Main DBrains DAO is the bootstrap project that governs the entire platform.
 
 The Main DAO uses the **exact same infrastructure** as any child project — the same governors, tokens, treasury, and access control. It is deployed via `ProjectFactory.bootstrapMainProject()`, an owner-only function that runs during initial platform setup.
 
-This design choice ensures:
-
-* The platform "eats its own dog food" — governance mechanics are battle-tested at the platform level
-* No special-case code for platform governance vs project governance
-* The Main DAO members experience the same UX as any project team
-
 ## Platform Governance Powers
 
 The Main DAO controls:
