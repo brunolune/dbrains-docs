@@ -8,11 +8,11 @@ NTT is the core economic token of each project. It is an ERC-20 token with trans
 
 ### Key Properties
 
-- **Project-specific** — Each project has its own NTT contract
-- **Bound to a member** — NTTs are tied to the wallet that earned them
-- **Non-transferable** — Cannot be sent between wallets or traded on public markets
-- **Represents voting power** — Used to vote on governance proposals
-- **Represents profit share** — Proportional claim on project revenue
+* **Project-specific** — Each project has its own NTT contract
+* **Bound to a member** — NTTs are tied to the wallet that earned them
+* **Non-transferable** — Cannot be sent between wallets or traded on public markets
+* **Represents voting power** — Used to vote on governance proposals
+* **Represents profit share** — Proportional claim on project revenue
 
 ### How NTTs Are Earned
 
@@ -37,16 +37,10 @@ When NTTs are burned (converted to currency), the remaining holders' tokens beco
 
 SBTs are ERC-721 tokens that are non-transferable and serve as identity and access control mechanisms.
 
-### Community SBT
-
-- Represents membership in the DBrains platform
-- Required to vote on platform-level decisions (new project approvals)
-- One per wallet
-
 ### Project SBT
 
-- Represents membership in a specific project
-- Required to propose and vote within that project's governance
-- Required to place orders on the project's Private Order Book
-- Minted when a freelancer or investor is onboarded through governance
-- Used by Lit Protocol for encryption access control (only SBT holders can decrypt private proposal data)
+* Represents membership in a specific project
+* Required to propose and vote within that project's governance
+* Required to place orders on the project's Private Order Book
+* Minted when a freelancer or investor is onboarded through governance
+* Used by Lit Protocol for encryption access control (only SBT holders can decrypt private proposal data)
