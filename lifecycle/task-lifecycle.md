@@ -16,7 +16,7 @@ A project member proposes a new task (or set of tasks) via the `TaskGovernor`:
 
 Project members vote on the task proposal:
 
-- The `TaskGovernor` has the **shortest voting period** (5 minutes) for rapid iteration
+- The `TaskGovernor` has the **shortest voting period**, typically one to two days, suited to task cycles that span a few days to a week
 - Early execution threshold applies — overwhelming consensus can fast-track approval
 
 ### 3. Execution (Active Cycle)
@@ -69,7 +69,7 @@ Proposed → Active → Verified
 
 ## Key Points
 
-- **Fast governance** — 5-minute voting period keeps the development pace high
+- **Fast governance** — Short voting periods keep the development pace high
 - **On-chain accountability** — Task creation, verification, and rewards are all recorded on-chain
 - **Automatic rewards** — No manual token distribution; NTTs mint on verification
 - **Flexible** — Tasks can be rescheduled or canceled through governance if circumstances change
