@@ -11,7 +11,7 @@ The project creator submits an application through the platform UI:
 1. **Connect wallet** — A Web3 wallet is required
 2. **Fill metadata** — Title, description, mission, tokenomics plan, tech stack, roadmap, etc.
 3. **Approve USDC** — Approve the application fee (default 50 USDC, configurable by the Main DAO)
-4. **Submit** — The application is stored in PocketBase and recorded on-chain via `ProjectFactory.applyForProject()`
+4. **Submit** — The application is stored in the database and recorded on-chain via `ProjectFactory.applyForProject()`
 
 ### Step 2: Governance Vote
 
@@ -19,7 +19,7 @@ The application becomes visible in the Main DAO's proposals list:
 
 * **Who can propose**: Because the applicant paid the USDC fee, they are immediately granted permission to propose project creation — bypassing the standard minimum token threshold (anti-spam via economic cost rather than token ownership)
 * **Who can vote**: Only Main DBrains DAO members (Community SBT holders) can vote on new project approvals
-* **Sync check**: The "Validate" action is disabled until the blockchain event is indexed and matched with the PocketBase record
+* **Sync check**: The "Validate" action is disabled until the blockchain event is indexed and matched with the the database record
 
 ### Step 3: Automated Deployment
 
