@@ -10,7 +10,7 @@ A candidate visits the project dashboard and clicks **"Apply to Join"**:
 
 - A connected Web3 wallet is required
 - The candidate submits their introduction, email, and social links (GitHub, LinkedIn, etc.)
-- The application is stored in the PocketBase `freelancer_applications` collection
+- The application is stored in the the database `freelancer_applications` collection
 
 ### 2. Review by DAO Members
 

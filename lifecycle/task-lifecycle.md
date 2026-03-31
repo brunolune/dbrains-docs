@@ -25,7 +25,7 @@ If the vote passes:
 
 - The proposal executes **directly** — no queueing or delay
 - Tasks are created on-chain in `Active` state
-- Assignees begin work off-chain (details tracked in PocketBase)
+- Assignees begin work off-chain (details tracked in the database)
 
 ### 4. During Active Work
 

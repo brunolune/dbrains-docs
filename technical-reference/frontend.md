@@ -34,7 +34,7 @@ The dashboard is composed of several widgets:
 ### Onboarding Hub (`/projects/[id]/onboarding`)
 
 Dedicated sub-page for reviewing candidate applications:
-- Freelancer and investor applications from PocketBase
+- Freelancer and investor applications from the database
 - Candidate details (GitHub, LinkedIn, email, requested NTTs/price)
 - One-click button to draft an onboarding proposal
 
