@@ -5,6 +5,7 @@
 ## Introduction
 
 * [Welcome to DBrains](introduction/welcome.md)
+* [Objectives/Benefits](introduction/objectives-benefits.md)
 * [How It Works](introduction/how-it-works.md)
 
 ## Core Concepts
