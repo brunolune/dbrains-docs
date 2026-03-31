@@ -2,9 +2,16 @@
 
 DBrains is a **Decentralized Collaborative Freelancing Launching Platform**. It reimagines how people work together by merging freelancing, DAOs, project management, and token economics into a single, community-governed ecosystem.
 
-## The Problem
+### Objectives & Benefits
 
-Traditional freelancing platforms are centralized. They take large cuts, dictate terms, and create an imbalance of power between clients and workers. Meanwhile, DAOs have shown the promise of decentralized governance but often lack the practical tools for day-to-day project execution.
+- **A platform for the collective benefit of all** — DBrains aims to be a common good, developed and sustained by the community for the community. Empowering communities to self-organize, it aligns with the core principles of blockchain technology.
+- **Federating and amplifying collective intelligence** — DBrains fosters a collaborative environment where individual and collective interests align. By leveraging adapted tools and tokenomics, we empower teams to work efficiently and effectively. Our inclusive approach encourages diverse contributions from people with a wide range of backgrounds and skills. This diversity can lead to innovative solutions and unexpected breakthroughs.
+- **Fair collaboration** — Fairness is a cornerstone of DBrains. The tokenomics ensures equitable compensation for all contributors. Both investors and developers receive a share of the project's profits proportional to their token holdings.
+  To enable decentralized work, fair evaluation of contributions is crucial. The most effective approach is to delegate this responsibility to the project's DAO. Breaking down work into atomic units and relying on community consensus for validation ensures fair compensation and minimizes conflicts of interest. Blockchain technology provides an immutable record of these contributions, guaranteeing transparency and enabling automated reward distribution.
+- **Addressing labor market inefficiencies** — Direct project-talent matching through the Projects Board, inclusive onboarding that gives more people a chance, and a token-based reward system that retains only valuable contributors.
+- **Mitigating conflicts of interest** — Unlike traditional startups with predetermined profit sharing, DBrains rewards contributors based on their actual contributions through community consensus.
+- **A collaborative ecosystem for shared solutions and skills** — Members can contribute to multiple projects, gaining exposure to different approaches and best practices. Projects can collaborate on shared challenges, pooling resources and adopting solutions from other teams.
+- **Safeguarding projects from speculation** — The tokenomic model controls the inflow and outflow of funds, limiting excessive investment dilution. This empowers non-financial contributors and helps maintain token value against speculation and market manipulation.
 
 ## The DBrains Solution
 
@@ -24,9 +31,9 @@ DBrains bridges these worlds:
 
 ## Key Objectives
 
-| Objective | Description |
-|-----------|-------------|
-| Collective Intelligence | Unify and amplify community efforts |
-| Fair Remuneration | "No contribution, no remuneration" via NTT tokens |
-| Self-Organization | No traditional hierarchy — communities manage themselves |
-| Learning & Collaboration | Knowledge sharing and skill growth across projects |
+| Objective                | Description                                              |
+| ------------------------ | -------------------------------------------------------- |
+| Collective Intelligence  | Unify and amplify community efforts                      |
+| Fair Remuneration        | "No contribution, no remuneration" via NTT tokens        |
+| Self-Organization        | No traditional hierarchy — communities manage themselves |
+| Learning & Collaboration | Knowledge sharing and skill growth across projects       |
