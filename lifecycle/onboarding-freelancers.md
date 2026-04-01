@@ -1,16 +1,16 @@
 # Onboarding Freelancers
 
-New talent joins a project through a democratic onboarding process governed by the `FreelancerGovernor`.
+New talent joins a project through a democratic onboarding process governed by the DAO.
 
 ## The Workflow
 
-### 1. Application (Off-Chain)
+### 1. Application
 
 A candidate visits the project dashboard and clicks **"Apply to Join"**:
 
 - A connected Web3 wallet is required
 - The candidate submits their introduction, email, and social links (GitHub, LinkedIn, etc.)
-- The application is stored in the the database `freelancer_applications` collection
+- The application is stored in the database for review
 
 ### 2. Review by DAO Members
 
@@ -22,12 +22,11 @@ Existing project members review applications in the **"Onboarding"** tab of the 
 
 ### 3. Governance Proposal
 
-When a member clicks **"Create Onboarding Proposal"**, the frontend:
+When a member clicks **"Create Onboarding Proposal"**:
 
-1. Creates a proposal with type `freelancer-onboarding`
-2. Targets the `FreelancerGovernor`
-3. Generates calldata for `ProjectMembershipSBT.safeMint(applicantAddress)`
-4. Submits the proposal to governance
+1. A governance proposal is created to onboard the candidate
+2. The proposal, if passed, will mint a membership token (SBT) to the candidate's wallet
+3. The proposal is submitted for voting
 
 ### 4. Vote
 
