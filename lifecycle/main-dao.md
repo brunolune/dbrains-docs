@@ -4,7 +4,13 @@ The Main DBrains DAO is the bootstrap project that governs the entire platform.
 
 ## What Makes It Special
 
-The Main DAO uses the **exact same infrastructure** as any child project — the same governors, tokens, treasury, and access control. It is deployed via `ProjectFactory.bootstrapMainProject()`, an owner-only function that runs during initial platform setup.
+The Main DAO is the project that develops and maintains the DBrains platform itself. Because it is responsible for the platform's operation, it holds several privileged roles:
+
+- **Project Validation** — New projects submitted to DBrains must be approved by the Main DAO through community consensus. This ensures that only legitimate and well-defined projects are launched on the platform.
+- **Guardian Role** — The Main DAO acts as a guardian over all child projects, with the ability to intervene in emergency situations (e.g., pausing a project's order book) to protect the platform and its users.
+- **Fee Setting** — The Main DAO decides the platform's fee structure, including the application fee for new projects and the transaction fee on token conversions.
+
+Despite these privileges, the Main DAO operates using the same governance mechanics as any other project on the platform — proposals, voting, and democratic decision-making.
 
 ## Platform Governance Powers
 
