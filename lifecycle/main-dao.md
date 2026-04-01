@@ -16,16 +16,16 @@ Despite these privileges, the Main DAO operates using the same governance mechan
 
 The Main DAO controls:
 
-| Power                     | Mechanism                                                            |
-| ------------------------- | -------------------------------------------------------------------- |
-| Approve new projects      | Vote via `ProjectFactoryGovernor` → `ProjectFactory.createProject()` |
-| Set application fee       | `ProjectFactory.setFeeAmount()` via `ProjectSettingGovernor`         |
-| Set platform-wide POB fee | `ProjectFactory.setPobFeeBasisPoints()` via `ProjectSettingGovernor` |
-| Guardian role             | Emergency pause on child project order books                         |
+| Power                     | Mechanism                                                |
+| ------------------------- | -------------------------------------------------------- |
+| Approve new projects      | Governance vote to create and deploy a new project       |
+| Set application fee       | Governance vote to update the project application fee    |
+| Set platform-wide POB fee | Governance vote to update the token conversion fee       |
+| Guardian role             | Emergency pause on child project order books             |
 
 ## Revenue
 
 The Main DAO earns revenue through:
 
-1. **Application fees** — 50 USDC per project application (collected by the factory)
-2. **POB transaction fees** — A percentage (default 1%) of every NTT conversion in child projects is routed to the Main DAO's `ProjectTreasury`
+1. **Application fees** — 50 USDC per project application
+2. **POB transaction fees** — A percentage (default 1%) of every NTT conversion in child projects is routed to the Main DAO's treasury
