@@ -28,22 +28,22 @@ Proposal creation thresholds scale with token supply (1% in basis points), ensur
 
 ## Governor Overview
 
-| Governor | Domain | Voting Period |
-|----------|--------|---------------|
-| BacklogGovernor | Project roadmap | 10 min |
-| TaskGovernor | Task lifecycle | 5 min |
-| TreasuryGovernor | Project spending | 5 min |
-| FreelancerGovernor | Talent admission | 10 min |
-| InvestorGovernor | Investor onboarding | 10 min |
-| PrivateOrderBookGovernor | Internal NTT market | 10 min |
-| ProjectSettingGovernor | Governance config | 10 min |
-| ProjectFactoryGovernor | Platform expansion | 10 min |
+| Governor | Domain |
+|----------|--------|
+| BacklogGovernor | Project roadmap |
+| TaskGovernor | Task lifecycle |
+| TreasuryGovernor | Project spending |
+| FreelancerGovernor | Talent admission |
+| InvestorGovernor | Investor onboarding |
+| PrivateOrderBookGovernor | Internal NTT market |
+| ProjectSettingGovernor | Governance config |
+| ProjectFactoryGovernor | Platform expansion |
 
 Each governor is detailed in the [Governors](governors.md) page.
 
 ## Why Multiple Governors?
 
 1. **Separation of concerns** — Financial decisions have different risk profiles than task management
-2. **Tunable parameters** — Fast-paced task governance (5 min) vs. more deliberate treasury decisions
+2. **Tunable parameters** — Each governor can have its own voting parameters suited to its domain
 3. **Clear accountability** — Each governor has a well-defined scope of authority
 4. **Parallel governance** — Multiple proposals in different domains can proceed simultaneously
