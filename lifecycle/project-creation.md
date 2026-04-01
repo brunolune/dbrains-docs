@@ -11,7 +11,7 @@ The project creator submits an application through the platform UI:
 1. **Connect wallet** — A Web3 wallet is required
 2. **Fill metadata** — Title, description, mission, tokenomics plan, tech stack, roadmap, etc.
 3. **Approve USDC** — Approve the application fee (default 50 USDC, configurable by the Main DAO)
-4. **Submit** — The application is stored in the database and recorded on-chain via `ProjectFactory.applyForProject()`
+4. **Submit** — The application is stored in the database and recorded on-chain
 
 ### Step 2: Governance Vote
 
@@ -22,18 +22,11 @@ The application becomes visible in the Main DAO's proposals list:
 
 ### Step 3: Automated Deployment
 
-If the proposal passes, permissionless execution triggers `ProjectFactory.createProject(appId)`:
+If the proposal passes, execution triggers the automated deployment of the new project:
 
-1. The `ProjectDeployer` library is called via DELEGATECALL
-2. All child DAO contracts are deployed:
-   * 7 Governor proxies (Backlog, Task, Treasury, Freelancer, Investor, PrivateOrderBook, ProjectSetting)
-   * NTToken proxy
-   * ProjectMembershipSBT proxy
-   * PrivateOrderBook proxy
-   * ProjectTreasury
-   * AccessManager (with all roles and permissions wired)
-3. The creator receives an SBT (project membership)
-4. Optional: initial members and NTT allocations can be specified
+1. All the project's DAO contracts are deployed (governors, token, membership, order book, treasury, and access control)
+2. The creator receives an SBT (project membership)
+3. Optional: initial members and NTT allocations can be specified
 
 ### Output
 
@@ -41,5 +34,5 @@ A fully configured DAO with democratic governance, a treasury, an internal marke
 
 ## Cost
 
-* **Application fee**: 50 USDC (configurable by the Main DAO via `ProjectFactory.setFeeAmount()`)
+* **Application fee**: 50 USDC (configurable by the Main DAO)
 * **Gas**: Deployment costs are covered by the executor of the passed proposal

@@ -6,17 +6,17 @@ Tasks are the fundamental units of work in DBrains. Every task flows through gov
 
 ### 1. Task Proposal
 
-A project member proposes a new task (or set of tasks) via the `TaskGovernor`:
+A project member proposes a new task (or set of tasks) through governance:
 
-- **Payload**: Calls `TaskManager.createTask(proposalId, description, assignee, reward, start, end)`
 - **Structure**: Includes feasibility analysis, schedule (start/end dates), and specific sub-tasks with individual NTT rewards
-- **Refinement**: Proposals can link to previous ones (`parentId`) to track version history — useful for iterating on backlog items
+- **Assignee & reward**: Each task specifies who will do the work and the NTT reward upon completion
+- **Refinement**: Proposals can link to previous ones to track version history — useful for iterating on backlog items
 
 ### 2. Vote
 
 Project members vote on the task proposal:
 
-- The `TaskGovernor` has the **shortest voting period**, typically one to two days, suited to task cycles that span a few days to a week
+- Task governance has the **shortest voting period**, typically one to two days, suited to task cycles that span a few days to a week
 - Early execution threshold applies — overwhelming consensus can fast-track approval
 
 ### 3. Execution (Active Cycle)
@@ -24,7 +24,7 @@ Project members vote on the task proposal:
 If the vote passes:
 
 - The proposal executes **directly** — no queueing or delay
-- Tasks are created on-chain in `Active` state
+- Tasks become active on-chain
 - Assignees begin work off-chain (details tracked in the database)
 
 ### 4. During Active Work
@@ -33,25 +33,24 @@ While tasks are in progress, governance can:
 
 | Action | When |
 |--------|------|
-| `rescheduleTask(taskId, newStart, newEnd)` | If delays occur |
-| `cancelTask(taskId)` | If the task is no longer needed |
+| Reschedule a task | If delays occur |
+| Cancel a task | If the task is no longer needed |
 
-Both require a governance proposal and vote through the `TaskGovernor`.
+Both require a governance proposal and vote.
 
 ### 5. Verification
 
 When a task's end date has passed:
 
 1. A **"Request Verification"** button appears on the task card in the Dashboard
-2. Clicking it auto-creates a verification proposal with calldata `TaskManager.verifyTask(taskId)`
-3. The proposal is tagged as type `task-verify`
-4. DAO members review the deliverables and vote
+2. Clicking it auto-creates a verification proposal
+3. DAO members review the deliverables and vote
 
 ### 6. Reward
 
 If the verification vote passes:
 
-- The task state becomes `Verified`
+- The task is marked as verified
 - NTT rewards are **automatically minted** to the assignee
 - The minted NTTs immediately grant the assignee additional voting power and profit share
 
