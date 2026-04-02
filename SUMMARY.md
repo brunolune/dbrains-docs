@@ -33,15 +33,3 @@
 * [Project Treasury](financial-system/project-treasury.md)
 * [Private Order Book](financial-system/private-order-book.md)
 * [NTT Conversion Economics](financial-system/ntt-economics.md)
-
-## Technical Reference
-
-* [Smart Contracts](technical-reference/smart-contracts.md)
-* [Data Layer (PocketBase)](technical-reference/data-layer.md)
-* [Frontend](technical-reference/frontend.md)
-* [Privacy & Encryption](technical-reference/privacy-encryption.md)
-* [Deployment & Testing](technical-reference/deployment.md)
-
-## Roadmap
-
-* [Future Plans](roadmap/future-plans.md)

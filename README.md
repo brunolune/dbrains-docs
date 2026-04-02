@@ -10,10 +10,10 @@ DBrains is a platform where communities can self-organize to build projects toge
 
 ### Key Principles
 
-- **Collective Intelligence** — Unify and amplify community efforts toward shared goals.
-- **Fair Remuneration** — "No contribution, no remuneration." Rewards are earned through verified work, tracked via Non-Transferable Tokens (NTT).
-- **Self-Organization** — Communities manage projects without traditional hierarchy. Every major decision goes through governance.
-- **Learning & Collaboration** — Facilitate knowledge sharing and skill growth across projects.
+* **Collective Intelligence** — Unify and amplify community efforts toward shared goals.
+* **Fair Remuneration** — "No contribution, no remuneration." Rewards are earned through verified work, tracked via Non-Transferable Tokens (NTT).
+* **Self-Organization** — Communities manage projects without traditional hierarchy. Every major decision goes through governance.
+* **Learning & Collaboration** — Facilitate knowledge sharing and skill growth across projects.
 
 ### How It Works
 
@@ -25,7 +25,7 @@ DBrains is a platform where communities can self-organize to build projects toge
 
 ### Quick Links
 
-- [Core Concepts](core-concepts/projects.md) — Understand projects, tokens, and DAOs
-- [Lifecycle & Workflows](lifecycle/project-creation.md) — How things get done
-- [Governance](governance/multi-governor-architecture.md) — How decisions are made
-- [Technical Reference](technical-reference/smart-contracts.md) — For developers
+* [Core Concepts](core-concepts/projects.md) — Understand projects, tokens, and DAOs
+* [Lifecycle & Workflows](lifecycle/project-creation.md) — How things get done
+* [Governance](governance/multi-governor-architecture.md) — How decisions are made
+* [Technical Reference](/broken/pages/Wg2wmNrVrWQYbgri8HjE) — For developers
