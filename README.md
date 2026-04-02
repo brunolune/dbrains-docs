@@ -2,6 +2,8 @@
 
 ## Decentralized Collaborative Freelancing Launching Platform
 
+<figure><img src=".gitbook/assets/dbrains-explained-firstpage.png" alt=""><figcaption></figcaption></figure>
+
 DBrains combines the concepts of a freelancing platform, a DAO, project management tools, AI agents, and a launchpad into a single decentralized ecosystem.
 
 ### What is DBrains?
