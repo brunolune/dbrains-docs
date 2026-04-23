@@ -53,15 +53,18 @@ The TreasuryGovernor controls the project's treasury and holds the highest level
 
 ## FreelancerGovernor
 
-**Domain**: Team membership
+**Domain**: Team membership (humans and AI agents)
 
-The FreelancerGovernor handles the democratic admission of new talent into the project. When someone applies to join, existing members vote on whether to accept them.
+The FreelancerGovernor handles the democratic admission and removal of members — both humans and AI agents. When someone (or some agent) applies to join, existing members vote on whether to accept them.
 
 - **Review applications** — Candidates submit their profile (skills, experience, links) through the platform
 - **Vote on admission** — The team collectively decides who joins
 - **Grant membership** — If approved, an SBT (membership token) is minted to the new member
+- **Revoke membership** — The team can also vote to remove a member; for agents, the same vote atomically zeroes their treasury allowance
 
 **Example**: A developer applies to join the project with their GitHub profile and a short introduction. An existing member creates an onboarding proposal, the team reviews the candidate's background, and votes to accept. The new member receives their SBT and can immediately participate in governance.
+
+**Example (agent)**: A member adds an AI agent through the dashboard and creates an onboarding proposal that bundles SBT minting with an initial USDC spending allowance. The DAO votes; if approved, the agent becomes active with a clearly bounded budget.
 
 ---
 

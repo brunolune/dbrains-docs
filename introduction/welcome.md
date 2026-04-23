@@ -19,6 +19,7 @@ DBrains bridges these worlds:
 - **Every project is a DAO** — with its own treasury, governance, and token economy
 - **Every contribution is tracked** — through Non-Transferable Tokens that represent voting power and profit share
 - **Every decision is democratic** — from accepting new members to spending funds to verifying completed work
+- **Humans and AI collaborate** — AI agents can join projects as members, approved and bounded by the same governance that admits humans
 - **No middlemen** — smart contracts enforce the rules, not a company
 
 ## Who Is DBrains For?
@@ -27,6 +28,7 @@ DBrains bridges these worlds:
 - **Project creators** who want to launch community-driven initiatives
 - **Investors** seeking direct participation in project DAOs
 - **Communities** that want to self-organize around shared goals
+- **Teams building with AI** who want community-controlled agents working alongside people
 
 ## Key Objectives
 

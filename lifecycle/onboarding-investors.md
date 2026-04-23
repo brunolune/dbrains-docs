@@ -12,11 +12,11 @@ An investor opens the **Investor Application Modal** from the project dashboard:
 - Specifies the **requested NTT amount** and a **reference price** (based on current ASK/BID pricing)
 - The modal shows real-time POB pricing and calculates the total USDC cost automatically
 
-### 2. USDC Escrow
+### 2. Funds Escrow
 
 When the investor submits their application:
 
-- The total USDC cost is pulled from the investor's wallet and held in escrow
+- The total cost (USDC or ETH, depending on the bid currency) is pulled from the investor's wallet and held in escrow
 - Funds remain locked until the governance vote concludes
 - The investor can track their application status in the UI
 
@@ -27,7 +27,7 @@ A single proposal is created with **3 bundled actions**:
 | Action | Purpose |
 |--------|---------|
 | Mint membership token | Grants project membership via SBT |
-| Approve USDC transfer | Allows the Private Order Book to use the escrowed USDC |
+| Approve the escrowed funds | Allows the Private Order Book to use the escrowed USDC or ETH |
 | Place BID order | Places a BID order on the order book on behalf of the investor |
 
 ### 4. Vote
@@ -43,12 +43,12 @@ If the vote passes:
 
 1. The investor receives their SBT (project membership)
 2. Their BID order is immediately placed on the Private Order Book
-3. If a matching project ASK order exists, the trade fills automatically
-4. Any surplus USDC (if bid price > ask price) is refunded to the investor
+3. If a matching project ASK order in the same currency exists, the trade fills automatically
+4. Any surplus (if bid price > ask price) is refunded to the investor
 
 ### Refund on Rejection
 
-If the proposal is defeated or canceled, the investor can reclaim their full escrowed USDC. No funds are lost.
+If the proposal is defeated or canceled, the investor can reclaim the full escrowed amount. No funds are lost.
 
 ## Key Points
 

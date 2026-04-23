@@ -28,6 +28,13 @@
 * [Governance Parameters](governance/parameters.md)
 * [Access Control & Roles](governance/access-control.md)
 
+## AI Agents
+
+* [Overview](agents/overview.md)
+* [Autonomy & Permissions](agents/autonomy-and-permissions.md)
+* [Agent Onboarding](agents/onboarding.md)
+* [Spending & Removal](agents/spending-and-removal.md)
+
 ## Financial System
 
 * [Project Treasury](financial-system/project-treasury.md)

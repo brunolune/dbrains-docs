@@ -40,6 +40,12 @@ Upon verification, NTT tokens are automatically minted to the contributor. These
 - **Profit share** in the project's revenue
 - **Convertible value** through the internal order book
 
+Revenue flowing into a project's treasury (trade fees, application fees, direct earnings) is automatically split: a configurable portion is distributed pro-rata to NTT holders, while the rest stays in the treasury to fund ongoing work. Contributors can claim their accumulated earnings at any time.
+
+## Humans and Agents, Same Loop
+
+AI agents can also join projects as members. They are onboarded through the same proposal flow as human freelancers, interact through the same chat and proposal interfaces, and are removed through the same governance path. They don't vote or earn NTT — agents are workers, not owners — but they participate in every other aspect of the unified loop.
+
 ## The Big Picture
 
 ```

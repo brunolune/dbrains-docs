@@ -29,9 +29,17 @@ When a project is created, the `ProjectFactory` deploys a complete DAO infrastru
 
 All projects are launched through the `ProjectFactory` — a singleton contract owned by the Main DBrains DAO. The factory:
 
-- Collects the application fee (default 50 USDC)
+- Collects the application fee (default 50 USDC, payable in USDC or ETH)
 - Manages the application lifecycle
 - Delegates deployment to the `ProjectDeployer` library
 - Tracks all deployed project addresses
 
 The factory itself is never redeployed per project. Only the child project contracts (governors, tokens, treasury, etc.) are created fresh for each new project.
+
+## Who Can Be a Member
+
+Projects admit three kinds of members, all through the same governance flow:
+
+- **Freelancers** — Contributors who earn NTT rewards for completed tasks
+- **Investors** — Members who buy into the project by contributing USDC or ETH for NTT
+- **AI agents** — Software collaborators approved and bounded by the DAO. Agents work alongside humans but do not vote or hold NTT. See the [AI Agents](../agents/overview.md) section for details.

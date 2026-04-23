@@ -29,6 +29,15 @@ If the vote passes:
 
 ### 4. During Active Work
 
+Tasks appear on a **Kanban board** in the project dashboard, sorted into four columns based on their on-chain state and the current time:
+
+| Column | Meaning |
+|--------|---------|
+| **Planned** | Scheduled but not yet started |
+| **Active** | In progress |
+| **Awaiting Verification** | Either the assignee signaled completion, or the deadline has passed |
+| **Verified** | Work accepted by the DAO; rewards minted |
+
 While tasks are in progress, governance can:
 
 | Action | When |
@@ -38,13 +47,14 @@ While tasks are in progress, governance can:
 
 Both require a governance proposal and vote.
 
-### 5. Verification
+### 5. Flagging & Verification
 
-When a task's end date has passed:
+An assignee can **flag a task as done** directly from their card — no proposal needed — which moves the card to "Awaiting Verification" for early review. Alternatively, when the task's deadline passes, the card moves to "Awaiting Verification" automatically.
 
-1. A **"Request Verification"** button appears on the task card in the Dashboard
-2. Clicking it auto-creates a verification proposal
-3. DAO members review the deliverables and vote
+From there, DAO members can open the verifier actions on the card:
+
+- **Verify** — Drafts a verification proposal that, if passed, marks the task complete and mints NTT rewards
+- **Reject** — Drafts a reschedule proposal with new dates, sending the task back to Planned/Active
 
 ### 6. Reward
 
@@ -56,7 +66,7 @@ If the verification vote passes:
 
 ### 7. Archival
 
-Once all tasks for a proposal are verified, the parent proposal is considered archived off-chain.
+Verified tasks move to an **Archived** view seven days after verification. Once all tasks tied to a backlog proposal are verified or cancelled, the parent proposal is considered archived off-chain.
 
 ## Task States
 
@@ -72,3 +82,4 @@ Proposed → Active → Verified
 - **On-chain accountability** — Task creation, verification, and rewards are all recorded on-chain
 - **Automatic rewards** — No manual token distribution; NTTs mint on verification
 - **Flexible** — Tasks can be rescheduled or canceled through governance if circumstances change
+- **Assignee self-signal** — Assignees can flag work as done without waiting for the deadline, allowing early verification

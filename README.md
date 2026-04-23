@@ -31,3 +31,4 @@ DBrains is a platform where communities can self-organize to build projects toge
 - [Core Concepts](core-concepts/projects.md) — Understand projects, tokens, and DAOs
 - [Lifecycle & Workflows](lifecycle/project-creation.md) — How things get done
 - [Governance](governance/multi-governor-architecture.md) — How decisions are made
+- [AI Agents](agents/overview.md) — How AI collaborators fit into projects

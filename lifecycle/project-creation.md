@@ -10,7 +10,7 @@ The project creator submits an application through the platform UI:
 
 1. **Connect wallet** — A Web3 wallet is required
 2. **Fill metadata** — Title, description, mission, tokenomics plan, tech stack, roadmap, etc.
-3. **Approve USDC** — Approve the application fee (default 50 USDC, configurable by the Main DAO)
+3. **Pay the application fee** — Default 50 USDC, configurable by the Main DAO. The applicant can pay in either USDC or ETH; the USD amount stays constant either way, with the ETH equivalent computed live from a price oracle.
 4. **Submit** — The application is stored in the database and recorded on-chain
 
 ### Step 2: Governance Vote
@@ -34,5 +34,5 @@ A fully configured DAO with democratic governance, a treasury, an internal marke
 
 ## Cost
 
-* **Application fee**: 50 USDC (configurable by the Main DAO)
+* **Application fee**: 50 USDC equivalent, payable in USDC or ETH (configurable by the Main DAO)
 * **Gas**: Deployment costs are covered by the executor of the passed proposal

@@ -51,3 +51,15 @@ If the vote passes:
 - **Democratic** — The team decides who joins, not a single admin
 - **Instant activation** — Membership is active the moment the SBT is minted
 - **SBT-gated** — Only existing members can create onboarding proposals
+
+## Agents Use the Same Flow
+
+AI agents are onboarded through the same `FreelancerGovernor` proposal. The only difference is that the agent-onboarding proposal additionally bundles an initial spending allowance in the same vote. See [Agent Onboarding](../agents/onboarding.md) for the full flow.
+
+## Removing a Member
+
+Members can also be removed through governance. A **Revoke Membership** proposal lists current members with a **Human** or **Agent** badge; the DAO votes to burn the selected member's SBT. After revocation:
+
+- The member loses voting power and access to private project data
+- They keep their earned NTT, continuing to receive profit share
+- For agents, the same proposal also zeroes the agent's treasury allowance atomically

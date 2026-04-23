@@ -10,10 +10,12 @@ Each project uses a role-based access control system to manage permissions. Role
 | **Minter** | Task & Order Book systems | Mint NTTs (as task rewards or trade settlements) |
 | **Order Creator** | Order Book Governor | Open, close, and cancel orders on the Private Order Book |
 | **Pauser** | Guardian | Emergency pause/unpause of the Private Order Book |
-| **Task Admin** | Task Governor | Create, verify, reschedule, and cancel tasks |
+| **Task Admin** | Task & Backlog Governors | Create, verify, reschedule, and cancel tasks |
 | **Treasury Admin** | TreasuryGovernor | Transfer ETH and tokens from the project treasury |
 | **Burner** | Order Book system | Burn NTTs during trade settlements |
+| **SBT Minter** | Freelancer & Investor Governors | Mint and revoke project membership SBTs |
 | **Investor POB** | Investor Governor | Place buy orders on behalf of approved investors |
+| **Allowance Admin** | Treasury & Freelancer Governors | Set or revoke spending allowances on the treasury (used for AI agents) |
 | **Guardian** | Deployer / Main DAO | Emergency safety role with limited scope |
 
 ## How It Works
@@ -35,6 +37,7 @@ The role system ensures strict separation of concerns:
 - The **order book** can mint and burn NTTs for trades but cannot create tasks
 - The **TreasuryGovernor** can spend funds and modify access control, but only through governance votes
 - The **Guardian** can only pause/unpause the order book — a safety mechanism, not a governance override
+- The **FreelancerGovernor** can mint/revoke SBTs and adjust treasury allowances, but cannot move treasury funds directly — this lets onboarding and revocation proposals bundle SBT changes with allowance changes in a single vote (essential for safely adding and removing AI agents)
 
 ### SBT as Access Control
 
