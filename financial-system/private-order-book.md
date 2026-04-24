@@ -92,8 +92,27 @@ The DAO controls NTT supply through project orders:
 
 ## Access Control
 
-- **SBT Gating** — Only project members can place and fill orders
-- **Investor Entry** — For non-members, the `InvestorGovernor` can place an investor bid as part of onboarding
+The order book treats buying and selling asymmetrically. The split exists so that revoked members can still exit their NTT position, but cannot buy their way back in.
+
+### Buy-Side — Members Only
+
+Placing a BID or filling an ASK is restricted to current project members (SBT holders). This means a revoked member cannot re-enter the project by purchasing NTTs on the secondary market.
+
+### Sell-Side — Members or NTT Holders
+
+Placing an ASK or filling a BID is open to **either** a current member **or** any wallet still holding NTT. This ensures that a revoked member retains a **liquidity exit** for the NTTs they earned during their membership: they keep their tokens for ongoing profit share (see [Tokenomics](../core-concepts/tokenomics.md#voting-power-vs-profit-share)), and can convert them to USDC or ETH whenever they choose. Without this, a revoked member's NTTs would be stranded — earning profit share but impossible to ever cash out.
+
+### Schedule Gating
+
+Both placing **and** filling orders require the book to be inside its currently scheduled active window. This applies uniformly — revoked sellers cannot use a leftover BID as a workaround when the book is closed. When the book opens or closes, it does so for everyone at the same time.
+
+### Investor Entry
+
+For non-members being onboarded, the `InvestorGovernor` places an investor BID directly as part of the onboarding proposal's execution. This path bypasses the buy-side member check because the investor is being added to the project by the governor in the same transaction.
+
+### Revoked-Member Sell UX
+
+Because the project dashboard itself is gated by SBT ownership, revoked members cannot reach the standard order book widget. Their entry point is the **My Holdings** page, which shows every project where they still hold NTT and exposes a dedicated **Sell NTT** panel for each — a slim, sell-only view of the live BID depth, supporting both limit and market sells in either currency. The same schedule gating applies: the panel is disabled while the book is closed.
 
 ## Safety (Pausable)
 

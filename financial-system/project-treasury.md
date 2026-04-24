@@ -59,7 +59,7 @@ The dashboard treasury widget shows each member's:
 - Total unclaimed pool for the project
 - Current distribution ratio
 
-Buttons let the member **sweep** (account for any new incoming funds) and **claim** (withdraw their share). For members who have been revoked from projects, a dedicated **My Holdings** page aggregates their claimable earnings across every project where they still hold NTT.
+Buttons let the member **sweep** (account for any new incoming funds) and **claim** (withdraw their share). For members who have been revoked from projects, a dedicated **My Holdings** page aggregates their claimable earnings across every project where they still hold NTT. Each revoked row on that page also exposes a **Sell NTT** panel — a sell-only view of the project's order book — so an ex-member can convert their remaining NTT to USDC or ETH without needing access to the (SBT-gated) project dashboard. See [Private Order Book → Access Control](private-order-book.md#access-control) for the buy-side / sell-side split that makes this possible.
 
 ### Governance Control
 

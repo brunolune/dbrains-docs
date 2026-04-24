@@ -60,4 +60,5 @@ A member can be removed from a project through a governance vote that burns thei
 
 - The former member loses voting power and access to private project data
 - Their earned NTT stays in their wallet for ongoing profit share
+- They keep **sell-side access to the Private Order Book** so they can exit their NTT position if they choose — surfaced via a dedicated **Sell NTT** panel on the My Holdings page. Buy-side access is blocked, so a revoked member cannot purchase their way back into the project.
 - For AI agents, the same proposal also zeroes the agent's spending allowance atomically

@@ -10,7 +10,7 @@ A project member proposes a new task (or set of tasks) through governance:
 
 - **Structure**: Includes feasibility analysis, schedule (start/end dates), and specific sub-tasks with individual NTT rewards
 - **Assignee & reward**: Each task specifies who will do the work and the NTT reward upon completion
-- **Refinement**: Proposals can link to previous ones to track version history — useful for iterating on backlog items
+- **Refinement**: Backlog proposals can link to a previous proposal as their parent, forming a version history (see [Refining a Backlog Item](#refining-a-backlog-item) below)
 
 ### 2. Vote
 
@@ -75,6 +75,53 @@ Proposed → Active → Verified
                   ↘ Cancelled
                   ↘ Rescheduled → Active → ...
 ```
+
+## Refining a Backlog Item
+
+Plans change. A backlog proposal that's still in flight can be **refined** by another proposal that supersedes it — useful when the scope shifts, an estimate was off, or the team learns something mid-stream.
+
+### When Refinement Is Allowed
+
+A proposal is refinable as long as it still has work in flight:
+
+- It hasn't been executed yet (still up for vote, queued, or pending), **or**
+- It has been executed and at least one of its tasks is still active
+
+Once every spawned task is verified or cancelled, the parent is considered archived and can no longer be refined. Proposals that were defeated, cancelled, expired, or rejected are never refinable — there's no live work to revise.
+
+### How a Refinement Replaces the Original
+
+A refinement is itself a backlog proposal, with one twist: it carries an explicit link to its parent. When members open the **Refine this proposal** action from a parent's detail panel, the new proposal modal pre-fills every field — title, description, feasibility, the full task list — so the team starts from the existing plan and edits from there.
+
+When the refinement is voted in and executes, two things happen atomically in the same transaction:
+
+1. **Any still-active tasks spawned by the parent are cancelled** — the refinement carries those cancellation calls in its own payload, captured at proposal time
+2. **The refinement's new tasks are created** — replacing the old work on the Kanban board
+
+If the parent hasn't been executed yet (no tasks to cancel), only the new tasks are created.
+
+### Supersedence
+
+The moment a refinement executes, the parent is **marked superseded** on-chain. From that point:
+
+- The parent can no longer be voted on or executed, even by direct contract calls — the lock is enforced by the governor itself, not just the UI
+- Already-terminal parents (executed, defeated, cancelled, expired) keep their status as-is — their in-flight task cleanup was handled by the refinement's cancellations
+
+This makes the refinement the new source of truth, and prevents stale parents from accidentally being acted on.
+
+### Revision Naming
+
+Refinement titles are auto-composed by extending the parent's name with a `-rev.<n>` suffix:
+
+```
+foo → foo-rev.1 → foo-rev.1.1 → foo-rev.1.1.1
+```
+
+Sibling refinements increment the trailing segment (`foo-rev.1`, `foo-rev.2`, …). The composed title is locked in at creation time so it matches what voters signed.
+
+### Refinement Tree in the Dashboard
+
+In the proposal list, refinements are rendered as a tree under their parent — indented, with guide lines connecting parent to child, and tagged as **Refinement**. This makes the version history visible at a glance: you can see how a backlog item evolved through successive iterations without leaving the list view.
 
 ## Key Points
 
