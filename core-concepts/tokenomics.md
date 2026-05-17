@@ -37,10 +37,22 @@ When NTTs are burned (converted to currency), the remaining holders' tokens beco
 
 NTTs carry two benefits, but they activate differently:
 
-- **Voting power** requires the holder to also hold a project SBT. If the SBT is revoked, voting power goes to zero even though NTTs remain in the wallet.
-- **Profit share** does not require an SBT. A revoked member keeps their NTTs and continues to earn a proportional share of project revenue until those NTTs are converted.
+- **Voting power** requires the holder to also hold a project SBT. If the SBT is revoked, voting power goes to zero even though NTTs remain in the wallet. Voting power is **sublinear** in NTT balance — see below.
+- **Profit share** does not require an SBT. It is strictly **linear pro-rata** to the holder's NTT balance. A revoked member keeps their NTTs and continues to earn a proportional share of project revenue until those NTTs are converted.
 
 This separation ensures that members who contributed are never retroactively stripped of their earned share, while access to governance remains tied to active membership.
+
+### Sublinear Voting Power
+
+Voting power does not scale one-to-one with NTT balance. It follows a **sublinear curve** tuned by a governance parameter **α** (alpha) between 0 and 1:
+
+- At **α = 1**, voting power equals NTT balance (purely linear).
+- At **α < 1**, each additional NTT yields slightly less voting power than the previous one. The merit signal is preserved — bigger contributors still have more say — but marginal influence flattens as holdings grow.
+- The **default is α = 0.7**, which neutralises solo-takeover risk (e.g. an investor accumulating a majority of supply through the order book) while keeping meaningful differentiation between contributor tiers.
+
+α is tunable by the DAO through the same configuration process as other governance parameters (see [Governance Parameters](../governance/parameters.md)). Each proposal locks in the α that was in force at its creation, so an in-flight vote is never re-weighted mid-stream.
+
+Profit share is **not** affected by α — it remains linear in NTT balance. Only voting weight is curved.
 
 ## SBT (Soul-Bound Tokens)
 

@@ -29,20 +29,21 @@ If the vote passes:
 
 ### 4. During Active Work
 
-Tasks appear on a **Kanban board** in the project dashboard, sorted into four columns based on their on-chain state and the current time:
+Tasks appear on a **Kanban board** in the project dashboard, sorted into five columns based on their on-chain state and the current time:
 
 | Column | Meaning |
 |--------|---------|
 | **Planned** | Scheduled but not yet started |
 | **Active** | In progress |
 | **Awaiting Verification** | Either the assignee signaled completion, or the deadline has passed |
+| **Rejected** | The verification vote did not pass; awaiting reschedule or cancellation |
 | **Verified** | Work accepted by the DAO; rewards minted |
 
 While tasks are in progress, governance can:
 
 | Action | When |
 |--------|------|
-| Reschedule a task | If delays occur |
+| Reschedule a task | If delays occur, or after a rejected verification |
 | Cancel a task | If the task is no longer needed |
 
 Both require a governance proposal and vote.
@@ -51,12 +52,23 @@ Both require a governance proposal and vote.
 
 An assignee can **flag a task as done** directly from their card — no proposal needed — which moves the card to "Awaiting Verification" for early review. Alternatively, when the task's deadline passes, the card moves to "Awaiting Verification" automatically.
 
-From there, DAO members can open the verifier actions on the card:
+From there, any DAO member can open a **verification vote** on the card. Verification is a **single vote with two on-chain outcomes** — no second proposal needed to record a rejection:
 
-- **Verify** — Drafts a verification proposal that, if passed, marks the task complete and mints NTT rewards
-- **Reject** — Drafts a reschedule proposal with new dates, sending the task back to Planned/Active
+- **If the vote passes** → the task moves to **Verified** and NTT rewards are automatically minted to the assignee.
+- **If the vote fails** → the task moves to **Rejected**. **No NTT is minted.**
 
-### 6. Reward
+Once voting ends, anyone can settle the outcome from the proposal page with a single action — labelled **Finalize: Verify Task** (green) on a passing vote or **Finalize: Reject Task** (red) on a failing one.
+
+### 6. After a Rejection
+
+A rejected task is not terminal — the DAO can act on it from the **Rejected** column with two buttons:
+
+- **Reschedule** — Drafts a proposal with new dates. If approved, the task returns to **Active** with a fresh window so the assignee can take another pass.
+- **Cancel** — Drafts a proposal to permanently close the task. If approved, the task is terminated.
+
+The same Reschedule action is also available on Planned and Active cards, so an assignee who anticipates a slip can self-signal it before the deadline rather than waiting for a rejection.
+
+### 7. Reward
 
 If the verification vote passes:
 
@@ -64,7 +76,7 @@ If the verification vote passes:
 - NTT rewards are **automatically minted** to the assignee
 - The minted NTTs immediately grant the assignee additional voting power and profit share
 
-### 7. Archival
+### 8. Archival
 
 Verified tasks move to an **Archived** view seven days after verification. Once all tasks tied to a backlog proposal are verified or cancelled, the parent proposal is considered archived off-chain.
 
@@ -73,6 +85,8 @@ Verified tasks move to an **Archived** view seven days after verification. Once 
 ```
 Proposed → Active → Verified
                   ↘ Cancelled
+                  ↘ Rejected → Active (rescheduled) → ...
+                             ↘ Cancelled
                   ↘ Rescheduled → Active → ...
 ```
 

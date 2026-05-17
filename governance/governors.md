@@ -8,7 +8,7 @@ Each project deploys 7 specialized governors. The Main DAO additionally uses the
 
 **Domain**: Project roadmap and direction
 
-The BacklogGovernor is where the team collectively decides **what to build and when**. Members use it to propose features, improvements, or strategic directions — whether short-term fixes or long-term vision.
+The BacklogGovernor is where the team collectively decides **what to build and when**. Members use it to propose features, improvements, or strategic directions — whether short-term fixes or long-term vision. It also hosts **task verification votes** — the single vote that decides whether a completed task is accepted or rejected (see TaskGovernor below).
 
 A backlog proposal should:
 
@@ -27,13 +27,15 @@ Proposals can be **refined** — a member can submit an improved version of a pr
 
 **Domain**: Day-to-day task operations
 
-The TaskGovernor manages the lifecycle of individual tasks — the concrete units of work that come out of backlog proposals. Through it, the team creates tasks with clear assignees and NTT rewards, verifies completed work, and handles schedule changes.
+The TaskGovernor manages the lifecycle of individual tasks — the concrete units of work that come out of backlog proposals. Through it, the team creates tasks with clear assignees and NTT rewards, and handles schedule changes or cancellations.
 
 - **Create tasks** — Turn approved backlog items into actionable tasks with deadlines and rewards
-- **Verify tasks** — Once work is delivered, the team votes to confirm the task is complete, triggering automatic NTT reward minting to the assignee
-- **Reschedule or cancel** — If circumstances change, the team can vote to adjust deadlines or cancel tasks that are no longer relevant
+- **Reschedule** — Adjust deadlines if circumstances change, or restart a task that came out of a rejected verification
+- **Reject or cancel** — A task whose verification vote failed lands in **Rejected** and can either be rescheduled (back to Active) or cancelled outright. Tasks that are no longer relevant can also be cancelled directly
 
-**Example**: Following the approved backlog proposal above, a member creates a task "Build translation infrastructure" assigned to Alice with a 1-week deadline and 200 NTT reward. When Alice delivers, the team reviews and votes to verify. Upon verification, 200 NTT are automatically minted to Alice's wallet.
+> **Note on verification**: The vote that decides whether a completed task is accepted is hosted by the **BacklogGovernor**, not the TaskGovernor. It is a single vote with two on-chain outcomes — a pass triggers automatic NTT reward minting; a fail moves the task to **Rejected** with no reward. See [Task Lifecycle](../lifecycle/task-lifecycle.md) for the full flow.
+
+**Example**: Following the approved backlog proposal above, a member creates a task "Build translation infrastructure" assigned to Alice with a 1-week deadline and 200 NTT reward. When Alice delivers, a member opens a verification vote. If it passes, 200 NTT are automatically minted to Alice's wallet. If it fails, the task moves to Rejected and the team can vote to reschedule it with a new deadline or cancel it.
 
 ---
 
@@ -100,9 +102,10 @@ The PrivateOrderBookGovernor controls the project's internal market where NTTs c
 
 **Domain**: Governance configuration
 
-The ProjectSettingGovernor allows the team to democratically adjust the voting parameters of all other governors — voting delay, voting period, quorum, and early execution threshold. Changes can be batched across multiple governors in a single proposal.
+The ProjectSettingGovernor allows the team to democratically adjust the voting parameters of all other governors — voting delay, voting period, quorum, early execution threshold, and the **voting power curve (α)**. Changes can be batched across multiple governors in a single proposal.
 
 - **Tune governance parameters** — Adjust voting rules to match the project's evolving needs
+- **Tune the voting power curve** — Adjust α to rebalance how voting power scales with NTT balance (see [Tokenomics](../core-concepts/tokenomics.md#sublinear-voting-power))
 - **Batch updates** — Modify parameters for several governors at once
 - **Self-governance** — Can also modify its own parameters through a vote
 - On the **Main project only**, also controls platform fees (application fee and POB transaction fee)

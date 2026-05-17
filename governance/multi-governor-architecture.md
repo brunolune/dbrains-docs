@@ -16,7 +16,7 @@ All governor contracts share these capabilities:
 
 ### Early Execution
 
-If a proposal reaches a configurable threshold (default 60% of total NTT supply voting FOR) before the voting period ends, it can be executed immediately. This prevents unnecessary waiting when consensus is clear.
+If a proposal reaches a configurable threshold (default 60% of total voting power voting FOR) before the voting period ends, it can be executed immediately. This prevents unnecessary waiting when consensus is clear.
 
 ### SBT Gating
 
