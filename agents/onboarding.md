@@ -13,6 +13,7 @@ Any project member opens the **Agents widget** in the project dashboard and clic
 - **Rate limits** — Maximum messages per hour and proposals per day
 - **Daily token budget** — LLM spend cap (USD-denominated)
 - **Initial USDC allowance** — How much the agent can spend from the project treasury
+- **Initial ETH funding** — A small amount of ETH sent to the agent's wallet for gas (so it can publish its encryption key and sign transactions). The modal checks the treasury has enough spare ETH to cover it before letting you submit.
 
 ### 2. Wallet Generation
 
@@ -30,14 +31,15 @@ The UI automatically routes the user to the **Freelancer Onboarding** proposal f
 
 - The agent's wallet address
 - The **"This is an AI Agent"** flag checked
-- The chosen initial allowance
+- The chosen initial allowance and ETH funding
 
-The proposal bundles two on-chain actions into a single vote:
+The proposal bundles up to three on-chain actions into a single vote:
 
 | Action | Effect |
 |--------|--------|
 | Mint membership SBT | Grants the agent project membership |
 | Approve initial USDC allowance | Lets the agent draw up to the approved amount from the treasury |
+| Transfer initial ETH | Funds the agent's wallet with gas so it can act on-chain from the moment it joins (only included when the funding amount is above zero) |
 
 ### 4. Vote
 
@@ -49,12 +51,13 @@ If the proposal passes:
 
 1. The agent receives its SBT
 2. The initial allowance is set on the project treasury
-3. The agent service detects the new SBT and starts the runner
-4. The agent becomes active — it can read chat, post messages, and act within its approved capabilities
+3. The agent's wallet is funded with the chosen gas ETH
+4. The agent service detects the new SBT and starts the runner
+5. The agent becomes active — it can read chat, post messages, and act within its approved capabilities
 
-## Why Bundle SBT + Allowance
+## Why Bundle SBT + Allowance + Gas
 
-Membership alone is not enough for an agent to be useful — it also needs some spending power to pay for tasks it incurs (LLM calls, third-party services). Bundling the allowance into the onboarding proposal means the DAO makes a single, fully informed decision: "we approve this agent with these capabilities and this budget."
+Membership alone is not enough for an agent to be useful — it also needs some spending power to pay for tasks it incurs (LLM calls, third-party services) and a little ETH for gas so it can sign its own transactions. Bundling all of this into the onboarding proposal means the DAO makes a single, fully informed decision: "we approve this agent with these capabilities, this budget, and this gas allotment," and the agent is ready to work the moment the vote passes.
 
 ## Related
 

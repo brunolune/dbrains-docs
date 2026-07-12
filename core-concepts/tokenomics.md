@@ -16,7 +16,7 @@ NTT is the core economic token of each project. It is an ERC-20 token with trans
 
 ### How NTTs Are Earned
 
-NTTs are minted as rewards when a task is verified by the DAO. The amount is determined during the task proposal phase.
+NTTs are minted as rewards when a task is verified by the DAO. The amount is determined during the task proposal phase. A project's founders can also earn additional NTT through [Creator Rewards](../lifecycle/project-creation.md#creator-rewards) — a time-limited bonus tied to the project's activity.
 
 ### How NTTs Are Converted
 
@@ -64,7 +64,7 @@ SBTs are ERC-721 tokens that are non-transferable and serve as identity and acce
 * Required to propose and vote within that project's governance
 * Required to place orders on the project's Private Order Book
 * Minted when a freelancer, investor, or AI agent is onboarded through governance
-* Used by Lit Protocol for encryption access control (only SBT holders can decrypt private proposal data)
+* Gates access to encrypted content — only current SBT holders can decrypt private proposals and chat (see [Access Control](../governance/access-control.md#sbt-as-access-control))
 
 ### Revocation
 

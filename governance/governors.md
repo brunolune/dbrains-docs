@@ -106,6 +106,7 @@ The ProjectSettingGovernor allows the team to democratically adjust the voting p
 
 - **Tune governance parameters** — Adjust voting rules to match the project's evolving needs
 - **Tune the voting power curve** — Adjust α to rebalance how voting power scales with NTT balance (see [Tokenomics](../core-concepts/tokenomics.md#sublinear-voting-power))
+- **Set creator rewards** — Lock in a project's creator-reward configuration (only creators can propose this one; see [Creator Rewards](../lifecycle/project-creation.md#creator-rewards))
 - **Batch updates** — Modify parameters for several governors at once
 - **Self-governance** — Can also modify its own parameters through a vote
 - On the **Main project only**, also controls platform fees (application fee and POB transaction fee)

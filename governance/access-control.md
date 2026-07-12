@@ -10,12 +10,15 @@ Each project uses a role-based access control system to manage permissions. Role
 | **Minter** | Task & Order Book systems | Mint NTTs (as task rewards or trade settlements) |
 | **Order Creator** | Order Book Governor | Open, close, and cancel orders on the Private Order Book |
 | **Pauser** | Guardian | Emergency pause/unpause of the Private Order Book |
-| **Task Admin** | Task & Backlog Governors | Create, verify, reschedule, and cancel tasks |
+| **Task Admin** | Task & Backlog Governors | Create, verify, reject, reschedule, and cancel tasks |
 | **Treasury Admin** | TreasuryGovernor | Transfer ETH and tokens from the project treasury |
 | **Burner** | Order Book system | Burn NTTs during trade settlements |
 | **SBT Minter** | Freelancer & Investor Governors | Mint and revoke project membership SBTs |
 | **Investor POB** | Investor Governor | Place buy orders on behalf of approved investors |
 | **Allowance Admin** | Treasury & Freelancer Governors | Set or revoke spending allowances on the treasury (used for AI agents) |
+| **Order Book Payer** | Order Book system | Settle payouts from the treasury when the project's own buy orders fill |
+| **NTT Settings** | Setting Governor | Adjust the voting power curve (α) on the NTT token |
+| **Creator Config** | Setting Governor | Set the project's creator-reward configuration |
 | **Guardian** | Deployer / Main DAO | Emergency safety role with limited scope |
 
 ## How It Works
@@ -46,7 +49,7 @@ Beyond the role system, project membership SBTs serve as a broader access contro
 - **Proposing**: Only SBT holders can create governance proposals
 - **Voting**: Only SBT holders can vote
 - **Trading**: Only SBT holders can place orders on the Private Order Book
-- **Decryption**: Only SBT holders can decrypt private proposal data (via Lit Protocol)
+- **Decryption**: Only current SBT holders can decrypt private proposals and chat. Encryption is **self-controlled** — each member derives an encryption key from their wallet and publishes a matching public key on-chain, so content is locked to the live membership with no dependency on any outside service. When a member is revoked, the project's key is rotated so they can no longer read new content (past content they already had access to stays readable).
 
 ## Guardian Decentralization (Future)
 

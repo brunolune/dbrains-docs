@@ -12,6 +12,7 @@
 * [Projects](core-concepts/projects.md)
 * [Tokenomics](core-concepts/tokenomics.md)
 * [DAO per Project](core-concepts/dao-per-project.md)
+* [Decentralized Backend](core-concepts/decentralized-backend.md)
 
 ## Lifecycle & Workflows
 

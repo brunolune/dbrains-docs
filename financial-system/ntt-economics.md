@@ -52,9 +52,10 @@ Revoked members keep their NTT and can still claim their earned share — their 
 
 ### Inflationary Pressure (Minting)
 
-NTTs are minted in two scenarios:
+NTTs are minted in three scenarios:
 - **Task verification** — The `TaskManager` mints NTTs to the assignee
 - **Project ASK orders** — When the project sells NTTs on the POB, new tokens are minted
+- **Creator rewards** — Founders claim a time-limited bonus tied to project activity ([Creator Rewards](../lifecycle/project-creation.md#creator-rewards))
 
 More minting means more total supply, which dilutes existing holders' percentage ownership.
 

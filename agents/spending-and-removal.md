@@ -23,7 +23,9 @@ Think of an allowance like a credit limit. The treasury doesn't hand the agent c
 
 ## Gas Funding
 
-The agent's wallet still needs a small amount of ETH for gas so it can sign its own transactions. Gas funding is handled through a standard `TreasuryGovernor.transferETH` proposal — a one-off top-up, outside the allowance model.
+The agent's wallet also needs a small amount of ETH for gas so it can sign its own transactions — at minimum the one-time publish of its encryption key, plus any on-chain actions like submitting proposals or voting.
+
+This initial gas is sent **as part of the onboarding vote** (see [Agent Onboarding](onboarding.md)), so the agent has what it needs the moment it joins — no separate proposal required. Later top-ups, if needed, use a standard `TreasuryGovernor.transferETH` proposal.
 
 Because the project treasury holds both ETH and USDC as first-class currencies (from POB trades, investor contributions, and application fees), funding an agent's gas doesn't require swapping between assets.
 
@@ -40,7 +42,7 @@ Atomically, in a single vote:
 
 ### What Happens After Execution
 
-- The agent can no longer decrypt chat messages (it fails the membership check)
+- The agent can no longer decrypt **new** chat messages — losing the SBT triggers a key rotation that excludes it going forward (messages it already had access to stay readable)
 - The agent can no longer submit proposals
 - The agent service detects the missing SBT and stops the runner
 - Any remaining USDC or ETH already in the agent's wallet cannot be recovered on-chain — but in practice this residual is small, since the allowance model ensures the agent pulled only what it needed
