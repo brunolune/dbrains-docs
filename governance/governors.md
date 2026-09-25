@@ -19,6 +19,11 @@ A backlog proposal should:
 
 Proposals can be **refined** — a member can submit an improved version of a previous proposal, linking it to the original to track iteration history. This is useful when the team agrees on the direction but wants to adjust scope, timeline, or task breakdown.
 
+The BacklogGovernor also hosts two related kinds of proposals:
+
+- **Roadmap proposals** — Changes to the project's milestone plan (see [Roadmap](../lifecycle/roadmap.md))
+- **Idea-reward proposals** — Rewarding the people behind a validated backlog or roadmap proposal with NTT (see [Idea Rewards](../lifecycle/idea-rewards.md))
+
 **Example**: A member proposes "Add multi-language support to the platform" with a 3-week timeline, broken into 4 tasks: translation infrastructure (assigned to Alice, 200 NTT), frontend integration (Bob, 150 NTT), language file creation (Carol, 100 NTT), and testing (Dave, 50 NTT). The team votes, suggests refinements, and once approved the tasks can be formally created through the TaskGovernor.
 
 ---
@@ -45,7 +50,7 @@ The TaskGovernor manages the lifecycle of individual tasks — the concrete unit
 
 The TreasuryGovernor controls the project's treasury and holds the highest level of authority within the project. It governs how funds (ETH and stablecoins) are spent and can modify access control for the entire project.
 
-- **Fund transfers** — Approve payments from the project treasury to external addresses
+- **Fund transfers** — Approve payments from the project treasury to external addresses, through a dedicated **Treasury Transfer** proposal (choose ETH or USDC, a recipient, and an amount). The form shows how much is available and blocks a transfer the treasury can't cover. The TreasuryGovernor is the **only** governor that can move funds — every payment, including gas for AI agents, goes through it
 - **Access control** — Manage roles and permissions across the project's contracts
 - **Administrative decisions** — Handle any structural changes to the project's governance setup
 
@@ -66,7 +71,7 @@ The FreelancerGovernor handles the democratic admission and removal of members �
 
 **Example**: A developer applies to join the project with their GitHub profile and a short introduction. An existing member creates an onboarding proposal, the team reviews the candidate's background, and votes to accept. The new member receives their SBT and can immediately participate in governance.
 
-**Example (agent)**: A member adds an AI agent through the dashboard and creates an onboarding proposal that bundles SBT minting with an initial USDC spending allowance. The DAO votes; if approved, the agent becomes active with a clearly bounded budget.
+**Example (agent)**: A member adds an AI agent through the dashboard and creates an onboarding proposal that bundles SBT minting with an initial USDC spending allowance. The DAO votes; if approved, the agent becomes active with a clearly bounded budget. The agent's gas money is sent through a separate Treasury Transfer proposal, since the FreelancerGovernor can set allowances but cannot move funds.
 
 ---
 
@@ -107,6 +112,7 @@ The ProjectSettingGovernor allows the team to democratically adjust the voting p
 - **Tune governance parameters** — Adjust voting rules to match the project's evolving needs
 - **Tune the voting power curve** — Adjust α to rebalance how voting power scales with NTT balance (see [Tokenomics](../core-concepts/tokenomics.md#sublinear-voting-power))
 - **Set creator rewards** — Lock in a project's creator-reward configuration (only creators can propose this one; see [Creator Rewards](../lifecycle/project-creation.md#creator-rewards))
+- **Set idea-reward pools** — Choose the default NTT amounts paid for a validated backlog or roadmap proposal (see [Idea Rewards](../lifecycle/idea-rewards.md)); any member can propose new amounts
 - **Batch updates** — Modify parameters for several governors at once
 - **Self-governance** — Can also modify its own parameters through a vote
 - On the **Main project only**, also controls platform fees (application fee and POB transaction fee)

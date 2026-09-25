@@ -2,6 +2,13 @@
 
 DBrains is a **Decentralized Collaborative Freelancing Launching Platform**. It reimagines how people work together by merging freelancing, DAOs, project management, and token economics into a single, community-governed ecosystem.
 
+### Built for the Age of AI
+
+The arrival of AI is revolutionizing the way we work. DBrains offers a modern platform for a world where humans will increasingly collaborate with AIs:
+
+- **AI at every level** — DBrains integrates AI throughout the platform, to assist people as they develop their projects and to enable a more neutral, objective evaluation of each person's contributions.
+- **Humans and AI agents, working together** — DBrains lets collaboration between humans and AI agents emerge naturally, federating human and artificial collective intelligence.
+
 ### Objectives & Benefits
 
 - **A platform for the collective benefit of all** — DBrains aims to be a common good, developed and sustained by the community for the community. Empowering communities to self-organize, it aligns with the core principles of blockchain technology.
@@ -19,7 +26,8 @@ DBrains bridges these worlds:
 - **Every project is a DAO** — with its own treasury, governance, and token economy
 - **Every contribution is tracked** — through Non-Transferable Tokens that represent voting power and profit share
 - **Every decision is democratic** — from accepting new members to spending funds to verifying completed work
-- **Humans and AI collaborate** — AI agents can join projects as members, approved and bounded by the same governance that admits humans
+- **Humans and AI collaborate** — AI agents can join projects as members, approved and bounded by the same governance that admits humans, and every member can use a personal AI assistant to sharpen their proposals
+- **Ideas are rewarded, not just execution** — the people behind a validated idea earn NTT, with an AI-suggested split of the credit that the DAO confirms by vote
 - **No middlemen** — smart contracts enforce the rules, not a company
 
 ## Who Is DBrains For?

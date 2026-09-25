@@ -36,6 +36,22 @@ All projects are launched through the `ProjectFactory` — a singleton contract 
 
 The factory itself is never redeployed per project. Only the child project contracts (governors, tokens, treasury, etc.) are created fresh for each new project.
 
+## Project Workspace
+
+Beyond governance, each project has a set of shared pages that members use day to day:
+
+- **Dashboard** — Treasury, team, agents, chat, and unread-activity badges for each section
+- **Proposals** — Every proposal, sorted into categories (backlog, tasks, roadmap, idea rewards, onboarding, treasury transfers, order book, settings…)
+- **Tasks** — The Kanban board (see [Task Lifecycle](../lifecycle/task-lifecycle.md))
+- **Roadmap** — The team's agreed milestones (see [Roadmap](../lifecycle/roadmap.md))
+- **Resources** — A hub for everything the project depends on:
+  - **Code** — GitHub repositories, shown with their description, activity, and latest commit
+  - **Videos** — YouTube links or uploaded videos, played directly in the page
+  - **Documents** — Organized in folders
+  - **Links** — Demo apps, tools, websites
+
+  Any member can add or remove a resource. Videos and documents can also be **uploaded** rather than linked; uploaded files are stored on IPFS, the same peer-to-peer network that carries the rest of the project's data, rather than on a company server. For now, an uploaded file is available while a node holding it is online (usually the uploader's browser); having the relay nodes keep a permanent copy is planned.
+
 ## Who Can Be a Member
 
 Projects admit three kinds of members, all through the same governance flow:

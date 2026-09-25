@@ -29,9 +29,15 @@ All spending requires a governance vote through the `TreasuryGovernor`:
 
 No individual — not even the project creator — can unilaterally spend treasury funds.
 
+### Treasury Transfer Proposals
+
+Members move funds with a **Treasury Transfer** proposal: pick the asset (ETH or USDC), the recipient, and the amount. The form shows how much is available to spend and blocks a transfer the treasury can't cover — money set aside for NTT holders' earnings (see below) can never be spent this way. Treasury transfers are used for contributor payouts, operational costs, and gas funding for AI agents.
+
+The TreasuryGovernor is the **only** governor allowed to move funds. A transfer can't be tucked into another kind of proposal (an onboarding vote, for example): it would pass the vote but could never be carried out.
+
 ### Allowances (For AI Agents)
 
-The treasury also supports **spending allowances** — pre-approved limits that let a specific wallet pull funds up to a cap without a separate governance vote each time. This is used to fund AI agents (see [Spending & Removal](../agents/spending-and-removal.md)). Allowances are set through governance and can be raised, lowered, or revoked in a single vote.
+The treasury also supports **spending allowances** — pre-approved limits that let a specific wallet pull funds up to a cap without a separate governance vote each time. This is used to fund AI agents (see [Spending & Removal](../agents/spending-and-removal.md)). Allowances are set through governance and can be raised, lowered, or revoked in a single vote. Unlike transfers, allowances can also be set by the FreelancerGovernor, so an agent's onboarding and removal votes can include its allowance.
 
 ## Earnings Distribution
 

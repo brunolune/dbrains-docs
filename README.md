@@ -16,13 +16,14 @@ DBrains is a platform where communities can self-organize to build projects toge
 - **Fair Remuneration** — "No contribution, no remuneration." Rewards are earned through verified work, tracked via Non-Transferable Tokens (NTT).
 - **Self-Organization** — Communities manage projects without traditional hierarchy. Every major decision goes through governance.
 - **Learning & Collaboration** — Facilitate knowledge sharing and skill growth across projects.
+- **Humans + AI** — AI is built in at every level: it helps people shape their projects, brings a more neutral view to evaluating contributions, and lets humans and AI agents work side by side.
 
 ### How It Works
 
 1. **Launch a Project** — Submit an application with a small fee. The community votes to approve it.
 2. **Build a Team** — Freelancers and investors apply to join. Members vote on who gets in.
 3. **Propose & Execute Work** — Tasks are proposed, voted on, and assigned through governance.
-4. **Verify & Get Rewarded** — Completed work is verified by the DAO. Contributors earn NTT tokens representing their ownership stake.
+4. **Verify & Get Rewarded** — Completed work is verified by the DAO. Contributors earn NTT tokens representing their ownership stake. The people behind a validated idea are rewarded too.
 5. **Trade & Convert** — NTT holders can convert their tokens to stablecoins through the project's internal order book.
 
 ### Quick Links

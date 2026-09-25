@@ -12,6 +12,7 @@ DBrains removes that chokepoint. Its data lives in **shared, append-only logs th
 
 - **No central server** — Data is replicated across a peer-to-peer network. Every participant keeps a copy and syncs changes with the others.
 - **Always-on anchor nodes** — A small set of independent "relay" nodes stay online to pass updates between members and hold a full copy of the data. Several run in parallel and back each other up, so any one can go offline without interrupting the platform. They can run on ordinary, low-cost hardware (even a Raspberry Pi) — entirely off big-cloud infrastructure.
+- **Self-monitoring** — The relay nodes are watched automatically. A relay that crashes or freezes is restarted, and a regular check also catches a subtler failure: a relay that looks healthy but has quietly stopped passing on some kinds of data (for example chat messages). When that happens the relay is restarted, and repeated problems raise an alert so the root cause gets fixed rather than hidden.
 - **Wallet-signed writes** — Instead of a username-and-password login on a central server, every change is **signed by your wallet**. This proves who made each edit and prevents forgery, with no login server to trust or take down.
 - **Privacy carries over** — The [self-controlled, membership-gated encryption](../governance/access-control.md#sbt-as-access-control) works exactly the same here. Private proposals and chat are readable only by current project members; the network stores nothing but encrypted, unreadable data.
 

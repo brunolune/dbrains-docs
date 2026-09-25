@@ -137,6 +137,14 @@ Sibling refinements increment the trailing segment (`foo-rev.1`, `foo-rev.2`, �
 
 In the proposal list, refinements are rendered as a tree under their parent — indented, with guide lines connecting parent to child, and tagged as **Refinement**. This makes the version history visible at a glance: you can see how a backlog item evolved through successive iterations without leaving the list view.
 
+### Other Proposals That Can Be Refined
+
+The same refinement mechanism also works for [roadmap proposals](roadmap.md) and [idea-reward proposals](idea-rewards.md). Since these don't spawn tasks, they can only be refined while they are **still up for vote** — once executed, a change is simply a new proposal.
+
+### Rewarding the Idea
+
+Every refinement, and the discussion around it, is part of an idea's history. When a backlog proposal is finally validated, the people who shaped it along the way — including through refinements that were voted down — can share an [Idea Reward](idea-rewards.md).
+
 ## Key Points
 
 - **Fast governance** — Short voting periods keep the development pace high

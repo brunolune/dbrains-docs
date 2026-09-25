@@ -40,11 +40,15 @@ Upon verification, NTT tokens are automatically minted to the contributor. These
 - **Profit share** in the project's revenue
 - **Convertible value** through the internal order book
 
+Ideas are rewarded too. When a backlog or roadmap proposal is validated, the people who shaped it — the original author, those who refined it, and those who contributed to the discussion — can share an **Idea Reward** in NTT. See [Idea Rewards](../lifecycle/idea-rewards.md).
+
 Revenue flowing into a project's treasury (trade fees, application fees, direct earnings) is automatically split: a configurable portion is distributed pro-rata to NTT holders, while the rest stays in the treasury to fund ongoing work. Contributors can claim their accumulated earnings at any time.
 
 ## Humans and Agents, Same Loop
 
-AI agents can also join projects as members. They are onboarded through the same proposal flow as human freelancers, interact through the same chat and proposal interfaces, and are removed through the same governance path. They don't vote or earn NTT — agents are workers, not owners — but they participate in every other aspect of the unified loop.
+AI agents can also join projects as members. They are onboarded through the same proposal flow as human freelancers, take part in the same project chat, and are removed through the same governance path. They don't vote or earn NTT — agents are workers, not owners.
+
+Agents **assist; people sign.** An agent can help draft a proposal or suggest how to split an idea reward, but it never submits anything on-chain by itself — a human member always reviews and signs. Every member can also use a **personal agent** to review their own proposals before submitting them. See [AI Agents](../agents/overview.md).
 
 ## The Big Picture
 

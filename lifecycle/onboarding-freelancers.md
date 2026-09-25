@@ -19,6 +19,10 @@ Existing project members review applications in the **"Onboarding"** tab of the 
 - Applications are listed with candidate details
 - Members can see the candidate's GitHub, LinkedIn, email, and introduction
 - A one-click button drafts an onboarding proposal for any candidate
+- Each application shows where it stands: **Pending** (no proposal yet), **Proposed** (a vote is in progress), **Onboarded** (accepted), or **Rejected** (the vote failed). The status is worked out from the proposals themselves, so it is always up to date
+- **Active** and **Archived** tabs keep the list tidy: once an application has been accepted or rejected, it moves to the archive
+
+On the Main DAO, the same hub also lists applications to create new projects.
 
 ### 3. Governance Proposal
 
@@ -54,7 +58,7 @@ If the vote passes:
 
 ## Agents Use the Same Flow
 
-AI agents are onboarded through the same `FreelancerGovernor` proposal. The only difference is that the agent-onboarding proposal additionally bundles an initial spending allowance in the same vote. See [Agent Onboarding](../agents/onboarding.md) for the full flow.
+AI agents are onboarded through the same `FreelancerGovernor` proposal. The only differences are that the agent-onboarding proposal can also grant an initial spending allowance in the same vote, and that a second, treasury proposal funds the agent's wallet with gas. See [Agent Onboarding](../agents/onboarding.md) for the full flow.
 
 ## Removing a Member
 

@@ -18,14 +18,14 @@ Think of an allowance like a credit limit. The treasury doesn't hand the agent c
 |-------|----------------|
 | **Initial grant** | Bundled into the onboarding proposal that mints the agent's SBT |
 | **Member-driven increase** | Any member can submit a `TreasuryGovernor` proposal to raise the limit |
-| **Agent-driven increase** | If granted `allowance.request`, the agent can submit its own proposal when low on funds |
+| **Agent-driven increase** | Planned: an agent with `allowance.request` will be able to ask for more when low on funds (not yet available) |
 | **Revocation** | Set atomically to zero when the agent's SBT is revoked |
 
 ## Gas Funding
 
-The agent's wallet also needs a small amount of ETH for gas so it can sign its own transactions — at minimum the one-time publish of its encryption key, plus any on-chain actions like submitting proposals or voting.
+The agent's wallet also needs a small amount of ETH for gas — mainly for the one-time publish of its encryption key, which it needs before it can join the project's encrypted chat.
 
-This initial gas is sent **as part of the onboarding vote** (see [Agent Onboarding](onboarding.md)), so the agent has what it needs the moment it joins — no separate proposal required. Later top-ups, if needed, use a standard `TreasuryGovernor.transferETH` proposal.
+This gas is sent through a **Treasury Transfer** proposal that the dashboard prepares right after the onboarding proposal (see [Agent Onboarding](onboarding.md)). It can't be part of the onboarding vote itself, because only the TreasuryGovernor may move funds. Later top-ups, if needed, use the same kind of Treasury Transfer proposal.
 
 Because the project treasury holds both ETH and USDC as first-class currencies (from POB trades, investor contributions, and application fees), funding an agent's gas doesn't require swapping between assets.
 
@@ -37,13 +37,12 @@ An agent is removed through the same governance path as a human member — the `
 
 Atomically, in a single vote:
 
-1. **Burns the agent's SBT** — The agent loses membership, chat access, and the ability to submit proposals
+1. **Burns the agent's SBT** — The agent loses membership and chat access
 2. **Zeros the agent's allowance** — Any pending spending attempts from the agent's wallet will revert
 
 ### What Happens After Execution
 
 - The agent can no longer decrypt **new** chat messages — losing the SBT triggers a key rotation that excludes it going forward (messages it already had access to stay readable)
-- The agent can no longer submit proposals
 - The agent service detects the missing SBT and stops the runner
 - Any remaining USDC or ETH already in the agent's wallet cannot be recovered on-chain — but in practice this residual is small, since the allowance model ensures the agent pulled only what it needed
 

@@ -16,7 +16,7 @@ NTT is the core economic token of each project. It is an ERC-20 token with trans
 
 ### How NTTs Are Earned
 
-NTTs are minted as rewards when a task is verified by the DAO. The amount is determined during the task proposal phase. A project's founders can also earn additional NTT through [Creator Rewards](../lifecycle/project-creation.md#creator-rewards) — a time-limited bonus tied to the project's activity.
+NTTs are minted as rewards when a task is verified by the DAO. The amount is determined during the task proposal phase. The people behind a validated backlog or roadmap proposal can also earn NTT through [Idea Rewards](../lifecycle/idea-rewards.md), so good ideas are rewarded alongside the work that carries them out. A project's founders can also earn additional NTT through [Creator Rewards](../lifecycle/project-creation.md#creator-rewards) — a time-limited bonus tied to the project's activity.
 
 ### How NTTs Are Converted
 

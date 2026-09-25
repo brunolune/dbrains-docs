@@ -13,6 +13,7 @@
 * [Tokenomics](core-concepts/tokenomics.md)
 * [DAO per Project](core-concepts/dao-per-project.md)
 * [Decentralized Backend](core-concepts/decentralized-backend.md)
+* [Member Alerts](core-concepts/member-alerts.md)
 
 ## Lifecycle & Workflows
 
@@ -21,6 +22,8 @@
 * [Onboarding Freelancers](lifecycle/onboarding-freelancers.md)
 * [Onboarding Investors](lifecycle/onboarding-investors.md)
 * [Task Lifecycle](lifecycle/task-lifecycle.md)
+* [Roadmap](lifecycle/roadmap.md)
+* [Idea Rewards](lifecycle/idea-rewards.md)
 
 ## Governance
 
@@ -35,6 +38,7 @@
 * [Autonomy & Permissions](agents/autonomy-and-permissions.md)
 * [Agent Onboarding](agents/onboarding.md)
 * [Spending & Removal](agents/spending-and-removal.md)
+* [Personal Agents](agents/personal-agents.md)
 
 ## Financial System
 

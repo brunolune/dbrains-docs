@@ -21,6 +21,10 @@ Each governor has configurable voting parameters that can be changed democratica
 5. Members vote on the changes
 6. If passed, new parameters take effect **immediately** upon execution
 
+### Idea Reward Pools
+
+The same form includes an **Idea Reward Pools** card, where any member can propose the default NTT amounts paid for a validated backlog proposal and a validated roadmap proposal. See [Idea Rewards](../lifecycle/idea-rewards.md).
+
 ### Batch Updates
 
 A single governance vote can update parameters across multiple governors simultaneously. For example, you could increase the voting period for both the treasury and backlog governors in one proposal.
